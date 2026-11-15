@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cambio Connect – Employee Experience &amp; Project Showcase</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<section id="login" class="login">
+  <div class="login-art" aria-hidden="true">
+    <img class="herobg" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1500&q=80" alt="" onerror="this.remove()">
+    <img src="assets/logo.jpeg" alt="" class="logo-big">
+    <h2>One place for Cambio people, projects and news.</h2>
+    <p>Prototype with fictional data. Not an official Cambio platform.</p>
+  </div>
+  <form id="loginForm" class="login-card">
+    <h1>Sign in to Cambio Connect</h1>
+    <label>Demo account
+      <select id="role">
+        <option value="Employee">Employee</option>
+        <option value="Project Contributor">Project Contributor</option>
+        <option value="Manager">Manager</option>
+        <option value="HR / Communications Admin">HR / Communications Admin</option>
+        <option value="System Administrator">System Administrator</option>
+      </select>
+    </label>
+    <label>Work email<input id="email" type="email" value="samuel@demo.cambio" required></label>
+    <label>Password<input type="password" value="demo1234" required></label>
+    <button class="btn" type="submit">Sign in</button>
+    <p class="hint">Demo accounts only. Real authentication needs Cambio approval.</p>
+  </form>
+</section>
+
+<div id="app" class="app" hidden>
+  <aside class="side" id="side">
+    <img src="assets/logo.jpeg" alt="Cambio" class="logo">
+    <nav id="nav" aria-label="Main navigation"></nav>
+    <button class="btn ghost" id="logout">Sign out</button>
+  </aside>
+  <div class="main">
+    <header class="top">
+      <button class="menu" id="menu" aria-label="Open menu">☰</button>
+      <input id="gsearch" type="search" placeholder="Search projects, people, news…" aria-label="Global search">
+      <div class="who"><span id="whoRole" class="badge"></span><span class="avatar" id="whoAv">S</span></div>
+    </header>
+    <main id="view" tabindex="-1"></main>
+    <footer class="foot">Cambio Connect is a proposed independent prototype. All people, projects and events shown are fictional.</footer>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
